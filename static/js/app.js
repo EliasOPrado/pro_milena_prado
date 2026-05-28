@@ -1,90 +1,12 @@
-// Dados de Desenhos e Atividades Originais Estáticos
-const STATIC_CARTOON_VIDEOS = [
-    {
-        id: 'galinha-pintadinha',
-        title: 'Galinha Pintadinha - Pintinho Amarelinho',
-        category: 'musica',
-        description: 'A clássica canção infantil brasileira que estimula o ritmo, a sonoridade dos animais e ensina sobre amizade e natureza de forma muito animada!',
-        youtubeId: 'SreW8u4tXQA',
-        coverImage: 'https://images.unsplash.com/photo-1598124146163-36819847286d?w=600&auto=format&fit=crop&q=80',
-        duration: '3:20',
-        skills: ['Ritmo Musical', 'Sons de Animais', 'Expressão Corporal'],
-        activityTitle: 'O Pintinho de Esponja 🧽',
-        activityText: 'Com uma esponja de cozinha macia cortada em círculo, pinte com tinta guache amarela um círculo no papel. Depois que secar, use canetinha laranja para desenhar o bico e as patinhas, e cole dois olhinhos ou faça com tinta. Essa atividade desenvolve a coordenação motora fina e a exploração sensorial das cores primárias!',
-        materialsNeeded: ['Papel branco', 'Tinta guache amarela', 'Esponja de cozinha', 'Canetinha preta e laranja']
-    },
-    {
-        id: 'mundo-bita',
-        title: 'Mundo Bita - Safári',
-        category: 'historias',
-        description: 'Participe de uma grande aventura musical de jipe pela savana africana conhecendo a girafa, o elefante, o leão e muito mais!',
-        youtubeId: 'f7Yk0K3I-QY',
-        coverImage: 'https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=600&auto=format&fit=crop&q=80',
-        duration: '2:53',
-        skills: ['Conhecimento da Fauna', 'Vocabulário', 'Curiosidade Científica'],
-        activityTitle: 'Imitando os Gigantes 🦣',
-        activityText: 'Vamos movimentar o corpo! Peça para a criança imitar o andar pesado e a tromba do elefante (braço esticado), o pescoço alto da girafa (braços pro alto na ponta dos pés) e o rugido forte do leão. Essa brincadeira psicomotora ajuda no desenvolvimento da consciência espacial, no equilíbrio dinâmico e na imitação simbólica.',
-        materialsNeeded: ['Espaço amplo para brincar', 'Espelho grande', 'Música alegre']
-    },
-    {
-        id: 'patrulha-canina',
-        title: 'Patrulha Canina - Resgate Divertido',
-        category: 'desenvolvimento',
-        description: 'Acompanhe Ryder e os filhotes heroicos resolvendo problemas do dia a dia, promovendo o trabalho em equipe e a solidariedade.',
-        youtubeId: 'Y_t_jRbyoI8',
-        coverImage: 'https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&auto=format&fit=crop&q=80',
-        duration: '4:15',
-        skills: ['Trabalho em Equipe', 'Resolução de Problemas', 'Ajuda Mútua'],
-        activityTitle: 'Minha Equipe de Resgate 🚑',
-        activityText: 'Use os brinquedos favoritos da criança para simular uma missão de resgate de um bichinho de pelúcia caído atrás de um monte de almofadas. Juntos criem caminhos seguros usando barbantes ou rampas feitas de papelão.',
-        materialsNeeded: ['Brinquedos diversos', 'Almofadas grandes', 'Barbante colorido']
-    },
-    {
-        id: 'bluey-familia',
-        title: 'Bluey - Brincando com o Papai',
-        category: 'desenvolvimento',
-        description: 'Bluey e Bingo usam o poder da imaginação sem limites para transformar atividades cotidianas em aventuras inesquecíveis, cheias de lições afetivas.',
-        youtubeId: 'Z-p_bMyW5Vw',
-        coverImage: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600&auto=format&fit=crop&q=80',
-        duration: '5:30',
-        skills: ['Inteligência Socioemocional', 'Criatividade Infantil', 'Brincar Livre'],
-        activityTitle: 'Construindo o Forte de Almofadas 🎪',
-        activityText: 'Pegue almofadas de sala, lençóis e cadeiras velhas para erguer um forte secreto na sala de estar. Coloque lanternas por dentro e use para leitura de contos infantis calmos.',
-        materialsNeeded: ['Lençóis macios', 'Cadeiras', 'Almofadas', 'Lanterna portátil']
-    },
-    {
-        id: 'turma-da-monica',
-        title: 'Turma da Mônica - Amigos para Sempre',
-        category: 'alfabetizacao',
-        description: 'Viva histórias clássicas do Bairro do Limoeiro com Mônica, Cebolinha, Cascão e Magali trabalhando empatia, amizade e alfabetização lúdica.',
-        youtubeId: 'j-h5EaA-n7Q',
-        coverImage: 'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=600&auto=format&fit=crop&q=80',
-        duration: '6:10',
-        skills: ['Alfabetização Lúdica', 'Expressões de Linguagem', 'Resolução de Conflitos'],
-        activityTitle: 'Desenhando Balões de Fala 💬',
-        activityText: 'Dobre uma folha sulfite comum ao meio, desenhe palitinhos representando os personagens prediletos e pergunte à criança o que cada um está dizendo. Escreva as respostas em balõezinhos de fala para associar a fala à grafia!',
-        materialsNeeded: ['Papel sulfite ou canson', 'Lápis de cor', 'Muita conversa engraçada!']
-    },
-    {
-        id: 'baby-shark-musical',
-        title: 'Baby Shark - Ritmo no Fundo do Mar',
-        category: 'musica',
-        description: 'Cante e dance no fundo do mar com a família Shark! Excelente para coordenação psicomotora fina ao imitar o tamanho dos tubarões com as mãos.',
-        youtubeId: 'XqZsoesa55w',
-        coverImage: 'https://images.unsplash.com/photo-1546026423-cc4642628d2b?w=600&auto=format&fit=crop&q=80',
-        duration: '2:16',
-        skills: ['Coordenação Motora Fina', 'Sequenciamento Auditivo', 'Movimentos de Pinça'],
-        activityTitle: 'Tubarão Amigo de Pregador 🏷️',
-        activityText: 'Desenhe e recorte em papel o corpinho de um tubarão cortado ao meio horizontalmente. Cole cada metade em uma das pinças de madeira de um pregador de roupas. Ao abrir o pregador, as mandíbulas se mexem! Treina musculatura dos dedinhos da pinça.',
-        materialsNeeded: ['Pregador de roupa de madeira', 'Papel colorido ou pintado', 'Cola escolar', 'Tesoura sem ponta']
-    }
-];
-
 // Lista dinâmica ativa
 let CARTOON_VIDEOS = [];
 
 function loadCustomVideos() {
-    CARTOON_VIDEOS = [...STATIC_CARTOON_VIDEOS];
+    CARTOON_VIDEOS = [];
+    if (typeof SERVER_CARTOON_VIDEOS !== 'undefined' && Array.isArray(SERVER_CARTOON_VIDEOS)) {
+        CARTOON_VIDEOS = [...SERVER_CARTOON_VIDEOS];
+    }
+
     try {
         const saved = localStorage.getItem('pro_milena_custom_videos');
         if (saved) {
@@ -189,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
     renderAchievementsWall();
     renderVideosGrid();
     renderCategoryPills();
+
+    const initialTab = typeof INITIAL_TAB !== 'undefined' ? INITIAL_TAB : 'home';
+    switchTab(initialTab);
 });
 
 // Troca de Abas
@@ -270,9 +195,16 @@ function handleAdminLogout() {
 }
 
 function extractYouTubeId(url) {
-    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
-    const match = url.match(regExp);
-    return (match && match[2].length === 11) ? match[2] : url;
+    if (!url) return '';
+    const trimmed = url.trim();
+    const match = trimmed.match(/^(?:https?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/))([A-Za-z0-9_-]{11})(?:[?&].*)?$/);
+    if (match) {
+        return match[1];
+    }
+    if (/^[A-Za-z0-9_-]{11}$/.test(trimmed)) {
+        return trimmed;
+    }
+    return '';
 }
 
 function handleAddVideo() {
@@ -663,6 +595,11 @@ function showVideoDetail(videoId) {
     const video = CARTOON_VIDEOS.find(v => v.id === videoId);
     if (!video) return;
 
+    if (!video.youtubeId || video.youtubeId.length !== 11) {
+        alert('Ops! O vídeo selecionado não pôde ser carregado. Verifique o link do YouTube e tente novamente.');
+        return;
+    }
+
     detailVideo = video;
     unlockBadge('badge-artista');
 
@@ -671,11 +608,16 @@ function showVideoDetail(videoId) {
     document.getElementById('section-videos').classList.add('hidden');
     document.getElementById('section-video-detail').classList.remove('hidden');
 
+    const origin = encodeURIComponent(window.location.origin);
+    const embedUrl = `https://www.youtube-nocookie.com/embed/${encodeURIComponent(video.youtubeId)}?rel=0&modestbranding=1&origin=${origin}&playsinline=1`;
+
     document.getElementById('video-frame-wrapper').innerHTML = `
         <iframe
-          src="https://www.youtube.com/embed/${video.youtubeId}?autoplay=1&rel=0"
+          src="${embedUrl}"
           title="${video.title}"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          frameborder="0"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
           class="absolute inset-0 w-full h-full"
         ></iframe>
